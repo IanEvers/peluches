@@ -6,7 +6,7 @@
       color="#52a73c"
       flat
     >
-      <v-app-bar-nav-icon class="d-md-none" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon class="d-md-none nav-icon" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       
       <v-img
         class="imagen"
@@ -24,15 +24,19 @@
         app
         temporary
       >
-        <div class="linksSidebar">
+        <div 
+          v-for="link in links" 
+          :key="link.nombre" 
+          class="linksSidebar"
+        >
           <NuxtLink 
-            v-for="link in links" 
-            :key="link.nombre" 
             :to="link.link" 
+            class="linkSidebar"
             :style="{color: link.color}"
           >
             {{ link.nombre }}
           </NuxtLink>
+          <v-divider></v-divider>
         </div>
       </v-navigation-drawer>
 
@@ -43,7 +47,7 @@
           :to="link.link" 
           class="d-none d-md-block" 
           style="color: white"
-        > 
+        >
           {{ link.nombre }}
         </NuxtLink>
       </div>
@@ -58,7 +62,7 @@
     </v-main>
 
     <v-footer
-      color="#78cfe0"
+      color="#52a73c"
       padless
     >
       <v-row
@@ -67,7 +71,7 @@
       >
       
         <v-col
-          class="primary lighten-2 py-4 text-center white--text"
+          class="lighten-2 py-4 text-center white--text"
           cols="12"
         >
           {{ new Date().getFullYear() }} — <strong>Peluches</strong>
@@ -129,6 +133,23 @@ a {
   text-decoration: none;
 }
 
+.nav-icon {
+  margin-right: auto;
+}
+
+@media (max-width: 960px) {
+  .imagen {
+    position: absolute;
+    margin: auto;
+  }
+}
+
+@media (min-width: 1264px) {
+  .container {
+    max-width: 1264px;
+  }
+}
+
 .inherit {
   color: inherit !important;
 }
@@ -153,8 +174,12 @@ a {
 .linksSidebar {
   display: flex;
   flex-direction: column;
+}
+
+.linkSidebar {
+ 
   padding: 1rem;
-  gap: 1rem;
+  font-size: 1.2rem;
 }
 
 .v-toolbar__content {

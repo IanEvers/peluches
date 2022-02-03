@@ -158,7 +158,9 @@ export default {
     "redes";
 }
 
-@media (min-width: 900px) {
-
+@media (min-width: 1300px) {
+  .contenedorContacto {
+    max-width: 60vw;
+  }
 }
 </style>
