@@ -21,7 +21,7 @@
 <script>
 import articuloCard from '~/components/articuloCard.vue'
 export default {
-  name: 'PedidoPage',
+  name: 'ProductosPage',
   components: { articuloCard },
   data: () => ({
     articulos: [

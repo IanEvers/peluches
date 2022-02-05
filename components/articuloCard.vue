@@ -27,16 +27,16 @@
 
     <v-card-actions class="precioComprar">
       <h3 class="ma-4 hidden-md-and-up">$ {{precio}}</h3>
-      <v-btn
-        block
-        color=#52a73c
-        :dark="!proximamente"
-        :disabled="proximamente"
-        width="90%"
-        class="botonComprar"
-      >
-        Pedir
-      </v-btn>
+      <NuxtLink v-if="!proximamente" to="checkout" class="botonComprar">
+        <v-btn
+          block
+          color=#52a73c
+          dark
+          width="90%"
+        >
+          Pedir
+        </v-btn>
+      </NuxtLink>
     </v-card-actions>
   </v-card>
 </template>
@@ -102,6 +102,10 @@ export default {
   color: white;
   width: 100%;
   float: right;
+}
+
+.botonComprar {
+  width: 100%;
 }
 
 @media (min-width: 960px) {

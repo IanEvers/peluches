@@ -7,15 +7,14 @@
       flat
     >
       <v-app-bar-nav-icon class="d-md-none nav-icon" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-      
-      <v-img
-        class="imagen"
-        contain
-        lazy-src="logo.png"
-        max-height="40"
-        max-width="150"
-        src="logo.png"
-      ></v-img>
+        <v-img
+          class="imagen"
+          contain
+          lazy-src="logo.png"
+          max-height="40"
+          max-width="150"
+          src="logo.png"
+        ></v-img>
 
       <v-navigation-drawer
         v-model="drawer"
@@ -95,11 +94,11 @@
         },
         {
           nombre: 'Productos',
-          link: '',
+          link: 'productos',
           color: '#8B1470'
         },
         {
-          nombre: 'Precios',
+          nombre: 'Sexo',
           link: '',
           color: '#ff5733'
         },
@@ -107,11 +106,6 @@
           nombre: 'Contacto',
           link: 'contacto',
           color: '#8B6CA1'
-        },
-        {
-          nombre: 'Nuestro Equipo',
-          link: 'actividades',
-          color: '#1A4E90'
         },
       ],
     }),

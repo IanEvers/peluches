@@ -5,12 +5,12 @@
       <v-img src="peluches.png" alt="peluches" class="imagenIntro">
       </v-img>
       <div class="textoIntro">
-        <h1>
-          mandas una foto, 
+        <h1 class="text-h4 mb-3">
+          Mandas una foto, 
           <br>
-          recibís un peluche
+          recibís un peluche.
         </h1>
-        <NuxtLink to="pedido">
+        <NuxtLink to="productos">
           <v-btn
             dark
             color='#52a73c'
@@ -26,9 +26,9 @@
 
     <v-divider class="dividerProceso"></v-divider>
 
-    <h1 class="procesoTitulo"> Nuestro Proceso </h1>
+    <h1 class="procesoTitulo text-h3"> Nuestro Proceso </h1>
     <div class="procesoImagen d-flex flex-column align-center">
-      <h2>imagen</h2>
+      <h2 class="text-h4">Imagen</h2>
       <v-img
         src="imagen.jpeg" 
         alt="imagen"
@@ -38,13 +38,13 @@
     </div>
     
     <div class="procesoDiseño d-flex flex-column align-center">
-      <h2>diseño</h2>
+      <h2 class="text-h4">Diseño</h2>
       <v-img src="diseño.jpeg" alt="" class="imagenProceso">
       </v-img>
     </div>
     
     <div class="procesoProducto d-flex flex-column align-center">
-      <h2>producto</h2>
+      <h2 class="text-h4">Producto</h2>
       <v-img src="producto.jpeg" alt="" class="imagenProceso">
       </v-img>
     </div>
@@ -52,20 +52,20 @@
     <v-divider class="dividerEquipo"></v-divider>
 
     <div class="equipo">
-      <h1>Nuestro Equipo</h1>
+      <h1 class="text-h3">Nuestro Equipo</h1>
       <div class="flex-row flex-wrap justify-space-around">
 
         <div class="flex-column">
 
-          <h2>producto</h2>
-          <v-img src="producto.jpeg" class="imagenProceso">
+          <h2 class="text-h4">Ian</h2>
+          <v-img src="holaa.jpg" class="imagenProceso">
           </v-img>
         </div>
        
         <div class="flex-column">
 
-          <h2>producto</h2>
-          <v-img src="producto.jpeg" class="imagenProceso">
+          <h2 class="text-h4">Cito</h2>
+          <v-img src="ian.png" class="imagenProceso">
           </v-img>
         </div>
       </div>
@@ -107,9 +107,8 @@ export default {
 
 .textoIntro {
   margin: 1rem auto;
-  font-size: clamp(1.2rem,1rem + 3.5vw);
   text-align: center;
-  text-transform: uppercase;
+  font-size: 2rem !important;
 }
 
 .dividerProceso {
@@ -135,7 +134,7 @@ export default {
 }
 
 .imagenProceso {
-  max-width: 90vw;
+  max-width: 300px;
   border-radius: 50%;
 }
 
@@ -180,12 +179,13 @@ export default {
   }
 
   .imagenIntro {
-    margin: 5rem;
+    margin: 3rem;
     max-width: 40%;
   }
 
   .textoIntro {
     margin: 2rem auto;
+    font-size: 3.75rem !important;
   }
 
   .botonPedido {
