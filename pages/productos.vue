@@ -36,7 +36,7 @@ export default {
         precio: 5000
       },
       {
-        nombre: "Rompecabezas",
+        nombre: "Rompecabezas", 
         descripcion: "hacemos un Rompecabezas! Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, nemo architecto!", 
         precio: 5000,
         proximamente: true
